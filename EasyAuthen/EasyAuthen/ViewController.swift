@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     //Explicit
-    var user:String = ""
-    var paasword:String = ""
+    var user: String = ""
+    var password: String = ""
     
     
     
@@ -25,7 +25,29 @@ class ViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         
+        //Check Click
         print("Click loginButton")
+        
+        //Get Value From TextField
+        
+        user = userTextField.text!
+        password = passwordTextField.text!
+        print("user ==>\(user)")
+        print("password ==> \(password)")
+        
+        //Check space
+        if (user.count == 0) || (password == "") {
+//            Have Space
+            print("Have Space")
+            
+        }else{
+//            No Space
+            
+            print("No Space")
+            
+        }
+        
+        
         
         
     }//Login Button Funtion
