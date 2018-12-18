@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         if (user.count == 0) || (password == "") {
 //            Have Space
             print("Have Space")
+            myAlert(title: "Have Space", massage: "Please Fill Every Blank")
             
         }else{
 //            No Space
@@ -51,6 +52,16 @@ class ViewController: UIViewController {
         
         
     }//Login Button Funtion
+    
+    func myAlert(title: String, massage: String) -> Void {
+        
+        let objAlert = UIAlertController(title: title, message: massage, preferredStyle: UIAlertController.Style.alert)
+        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+            objAlert.dismiss(animated: true, completion: nil)
+        }))
+            self.present(objAlert, animated: true, completion: nil)
+        
+    }//myAlert Function
     
     
 
