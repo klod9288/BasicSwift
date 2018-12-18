@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EasyAuthen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="EasyAuthen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,15 +68,16 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhN-IX-kDR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newregisater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-aa-XAp">
-                                <rect key="frame" x="142" y="634" width="130" height="27"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="shadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="3" height="3"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g6-BH-dbW">
+                                <rect key="frame" x="124" y="618" width="166" height="47"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Newregister">
+                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TB6-mn-Yit" kind="show" id="z25-NU-Y65"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -87,15 +88,15 @@
                             <constraint firstItem="R9c-TH-tzB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eaz-6y-oHg"/>
                             <constraint firstItem="59V-GU-l9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RcL-cK-ugX"/>
                             <constraint firstItem="EKM-yE-6dM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVP-N3-FLN"/>
-                            <constraint firstItem="TRm-aa-XAp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yf0-vI-iAa"/>
                             <constraint firstItem="59V-GU-l9h" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bTm-Js-Rfy"/>
                             <constraint firstItem="0JH-92-bz3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fBf-aO-XS1"/>
-                            <constraint firstItem="TRm-aa-XAp" firstAttribute="top" secondItem="R9c-TH-tzB" secondAttribute="bottom" constant="92" id="gAc-OS-fa8"/>
                             <constraint firstItem="bpk-dP-zYs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKE-VI-VP3"/>
                             <constraint firstItem="DwR-sc-B3r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdy-9M-X6p"/>
+                            <constraint firstItem="6g6-BH-dbW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGk-eM-6dZ"/>
                             <constraint firstItem="bpk-dP-zYs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="n3n-OX-x3Q"/>
                             <constraint firstItem="DwR-sc-B3r" firstAttribute="top" secondItem="EKM-yE-6dM" secondAttribute="bottom" constant="8" id="rfA-tK-3Kz"/>
                             <constraint firstAttribute="bottom" secondItem="59V-GU-l9h" secondAttribute="bottom" id="vNf-Cs-Qq6"/>
+                            <constraint firstItem="6g6-BH-dbW" firstAttribute="top" secondItem="R9c-TH-tzB" secondAttribute="bottom" constant="76" id="xp3-Hj-Idz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -107,6 +108,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="Vhi-cu-8tZ">
+            <objects>
+                <viewController title="Register" id="TB6-mn-Yit" customClass="RegisterViewController" customModule="EasyAuthen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pOs-9A-gA5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8qV-Ly-bP0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGV-NB-3ET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="21"/>
         </scene>
     </scenes>
     <resources>
