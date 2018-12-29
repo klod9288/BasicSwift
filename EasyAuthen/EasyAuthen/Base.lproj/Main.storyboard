@@ -158,10 +158,11 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-6P-P4N">
-                                <rect key="frame" x="0.0" y="784" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="789" width="414" height="85"/>
                                 <items>
                                     <barButtonItem title="Shake" image="shake_01" id="dKD-Aa-cNH"/>
                                 </items>
+                                <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dice" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-mK-MPv">
                                 <rect key="frame" x="132" y="180" width="150" height="150"/>
