@@ -151,13 +151,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_service" translatesAutoresizingMaskIntoConstraints="NO" id="v23-We-ulF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45B-uQ-nKi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Service" id="G1i-FU-qAM"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-6P-P4N">
+                                <rect key="frame" x="0.0" y="825" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="dKD-Aa-cNH"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_dice" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-mK-MPv">
+                                <rect key="frame" x="132" y="180" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v23-We-ulF" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="4lv-yW-vwD"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="CnG-TN-fXQ"/>
                             <constraint firstItem="v23-We-ulF" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="DGT-Ye-7j0"/>
+                            <constraint firstItem="4kW-6P-P4N" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="H0g-w5-uSp"/>
+                            <constraint firstAttribute="bottom" secondItem="4kW-6P-P4N" secondAttribute="bottom" constant="22" id="JGh-jr-dFV"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="top" secondItem="d14-cN-nvX" secondAttribute="top" id="N87-qi-6Eh"/>
                             <constraint firstAttribute="bottom" secondItem="v23-We-ulF" secondAttribute="bottom" id="WhQ-0U-qIY"/>
                             <constraint firstItem="v23-We-ulF" firstAttribute="top" secondItem="4Sb-9H-YuG" secondAttribute="top" id="eFB-KH-PPM"/>
+                            <constraint firstItem="4kW-6P-P4N" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="gGs-f3-NZK"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="yYu-Pf-hTF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d14-cN-nvX"/>
                     </view>
@@ -171,5 +193,6 @@
         <image name="Wallpaper" width="949" height="1429"/>
         <image name="bg_service" width="333" height="333"/>
         <image name="logo" width="170.5" height="170.5"/>
+        <image name="logo_dice" width="85" height="85"/>
     </resources>
 </document>
