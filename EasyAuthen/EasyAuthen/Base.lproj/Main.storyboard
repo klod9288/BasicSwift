@@ -158,9 +158,9 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-6P-P4N">
-                                <rect key="frame" x="0.0" y="825" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="784" width="414" height="90"/>
                                 <items>
-                                    <barButtonItem title="Item" id="dKD-Aa-cNH"/>
+                                    <barButtonItem title="Shake" image="shake_01" id="dKD-Aa-cNH"/>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dice" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-mK-MPv">
@@ -229,5 +229,6 @@
         <image name="dice3" width="170.5" height="170.5"/>
         <image name="logo" width="170.5" height="170.5"/>
         <image name="logo_dice" width="85" height="85"/>
+        <image name="shake_01" width="85" height="85"/>
     </resources>
 </document>
