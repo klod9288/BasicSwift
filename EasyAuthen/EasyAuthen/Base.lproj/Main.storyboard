@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="DwR-sc-B3r" id="VsK-Tr-Mpo"/>
                         <outlet property="userTextField" destination="EKM-yE-6dM" id="SWo-1U-7x9"/>
+                        <segue destination="Dn0-az-zQm" kind="show" identifier="success_login" id="4rg-BW-Vxk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,6 +117,21 @@
                     <view key="view" contentMode="scaleToFill" id="pOs-9A-gA5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-xn-NMu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Register" id="GFQ-sv-PAq">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="syF-K8-9fk">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="XVi-WA-wBu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8qV-Ly-bP0"/>
                     </view>
@@ -124,9 +140,36 @@
             </objects>
             <point key="canvasLocation" x="958" y="21"/>
         </scene>
+        <!--Service-->
+        <scene sceneID="iyr-s8-JTS">
+            <objects>
+                <viewController title="Service" id="Dn0-az-zQm" customClass="ServiceViewController" customModule="EasyAuthen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Sb-9H-YuG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_service" translatesAutoresizingMaskIntoConstraints="NO" id="v23-We-ulF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="4lv-yW-vwD"/>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="DGT-Ye-7j0"/>
+                            <constraint firstAttribute="bottom" secondItem="v23-We-ulF" secondAttribute="bottom" id="WhQ-0U-qIY"/>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="top" secondItem="4Sb-9H-YuG" secondAttribute="top" id="eFB-KH-PPM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d14-cN-nvX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKp-cE-1pm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794.20289855072474" y="20.758928571428569"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Wallpaper" width="2848" height="4288"/>
-        <image name="logo" width="512" height="512"/>
+        <image name="Wallpaper" width="949" height="1429"/>
+        <image name="bg_service" width="333" height="333"/>
+        <image name="logo" width="170.5" height="170.5"/>
     </resources>
 </document>

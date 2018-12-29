@@ -13,6 +13,7 @@
 		4BD1ED4C21C7873D001ED3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD1ED4A21C7873D001ED3B6 /* Main.storyboard */; };
 		4BD1ED4E21C7873D001ED3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD1ED4D21C7873D001ED3B6 /* Assets.xcassets */; };
 		4BD1ED5121C7873D001ED3B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD1ED4F21C7873D001ED3B6 /* LaunchScreen.storyboard */; };
+		4BFCF3DD21D715A300AF55AE /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFCF3DC21D715A300AF55AE /* ServiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4BD1ED4D21C7873D001ED3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD1ED5021C7873D001ED3B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BD1ED5221C7873D001ED3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFCF3DC21D715A300AF55AE /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4BD1ED4821C7873D001ED3B6 /* ViewController.swift */,
 				4BD1ED4A21C7873D001ED3B6 /* Main.storyboard */,
 				4B29FF9C21C8C75A00362907 /* RegisterViewController.swift */,
+				4BFCF3DC21D715A300AF55AE /* ServiceViewController.swift */,
 				4BD1ED4D21C7873D001ED3B6 /* Assets.xcassets */,
 				4BD1ED4F21C7873D001ED3B6 /* LaunchScreen.storyboard */,
 				4BD1ED5221C7873D001ED3B6 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				4B29FF9D21C8C75A00362907 /* RegisterViewController.swift in Sources */,
 				4BD1ED4921C7873D001ED3B6 /* ViewController.swift in Sources */,
+				4BFCF3DD21D715A300AF55AE /* ServiceViewController.swift in Sources */,
 				4BD1ED4721C7873D001ED3B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
