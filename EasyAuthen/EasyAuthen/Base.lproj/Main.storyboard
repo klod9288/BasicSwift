@@ -163,23 +163,55 @@
                                     <barButtonItem title="Item" id="dKD-Aa-cNH"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_dice" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-mK-MPv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dice" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-mK-MPv">
                                 <rect key="frame" x="132" y="180" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="MtY-3Z-lzH"/>
+                                    <constraint firstAttribute="height" constant="150" id="jGe-dF-kKp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="UvH-Fg-wgD">
+                                <rect key="frame" x="157" y="316" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fAd-rk-7bm"/>
+                                    <constraint firstAttribute="height" constant="100" id="mD9-DI-Y5q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-1D-lDs">
+                                <rect key="frame" x="24" y="316" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bpQ-RC-gjH"/>
+                                    <constraint firstAttribute="width" constant="100" id="okU-Rs-bHZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice3" translatesAutoresizingMaskIntoConstraints="NO" id="Vxp-eN-pJ1">
+                                <rect key="frame" x="290" y="316" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="V3u-1L-gbJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="Vht-l7-zVI"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v23-We-ulF" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="4lv-yW-vwD"/>
-                            <constraint firstItem="45B-uQ-nKi" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="CnG-TN-fXQ"/>
-                            <constraint firstItem="v23-We-ulF" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="DGT-Ye-7j0"/>
-                            <constraint firstItem="4kW-6P-P4N" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="H0g-w5-uSp"/>
-                            <constraint firstAttribute="bottom" secondItem="4kW-6P-P4N" secondAttribute="bottom" constant="22" id="JGh-jr-dFV"/>
-                            <constraint firstItem="45B-uQ-nKi" firstAttribute="top" secondItem="d14-cN-nvX" secondAttribute="top" id="N87-qi-6Eh"/>
-                            <constraint firstAttribute="bottom" secondItem="v23-We-ulF" secondAttribute="bottom" id="WhQ-0U-qIY"/>
-                            <constraint firstItem="v23-We-ulF" firstAttribute="top" secondItem="4Sb-9H-YuG" secondAttribute="top" id="eFB-KH-PPM"/>
-                            <constraint firstItem="4kW-6P-P4N" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="gGs-f3-NZK"/>
-                            <constraint firstItem="45B-uQ-nKi" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="yYu-Pf-hTF"/>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="03b-BY-j3w"/>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="top" secondItem="4Sb-9H-YuG" secondAttribute="top" id="1Sz-tE-EZP"/>
+                            <constraint firstItem="v23-We-ulF" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="90i-n8-Bsy"/>
+                            <constraint firstItem="7S8-1D-lDs" firstAttribute="top" secondItem="45B-uQ-nKi" secondAttribute="bottom" constant="228" id="C7X-JH-TKf"/>
+                            <constraint firstItem="7S8-1D-lDs" firstAttribute="centerX" secondItem="4Sb-9H-YuG" secondAttribute="centerX" constant="-133" id="FRE-rS-ZNm"/>
+                            <constraint firstItem="4kW-6P-P4N" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="GpL-6r-QXN"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="leading" secondItem="d14-cN-nvX" secondAttribute="leading" id="MDg-TU-UuX"/>
+                            <constraint firstAttribute="bottom" secondItem="4kW-6P-P4N" secondAttribute="bottom" constant="22" id="Ue7-Tc-SlR"/>
+                            <constraint firstItem="4kW-6P-P4N" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="VEM-1h-ylS"/>
+                            <constraint firstItem="UvH-Fg-wgD" firstAttribute="top" secondItem="45B-uQ-nKi" secondAttribute="bottom" constant="228" id="ahL-F4-UCd"/>
+                            <constraint firstAttribute="bottom" secondItem="v23-We-ulF" secondAttribute="bottom" id="dF4-oh-64h"/>
+                            <constraint firstItem="wF6-mK-MPv" firstAttribute="centerX" secondItem="4Sb-9H-YuG" secondAttribute="centerX" id="dt0-4G-K56"/>
+                            <constraint firstItem="Vxp-eN-pJ1" firstAttribute="centerX" secondItem="4Sb-9H-YuG" secondAttribute="centerX" constant="133" id="hqC-Pg-AUm"/>
+                            <constraint firstItem="wF6-mK-MPv" firstAttribute="top" secondItem="45B-uQ-nKi" secondAttribute="bottom" constant="92" id="jLx-gv-5XD"/>
+                            <constraint firstItem="Vxp-eN-pJ1" firstAttribute="top" secondItem="45B-uQ-nKi" secondAttribute="bottom" constant="228" id="k5A-lV-Oa8"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="top" secondItem="d14-cN-nvX" secondAttribute="top" id="lGV-OL-0tf"/>
+                            <constraint firstItem="UvH-Fg-wgD" firstAttribute="centerX" secondItem="4Sb-9H-YuG" secondAttribute="centerX" id="muC-ap-hRw"/>
+                            <constraint firstItem="45B-uQ-nKi" firstAttribute="trailing" secondItem="d14-cN-nvX" secondAttribute="trailing" id="x63-Zy-uVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d14-cN-nvX"/>
                     </view>
@@ -192,6 +224,9 @@
     <resources>
         <image name="Wallpaper" width="949" height="1429"/>
         <image name="bg_service" width="333" height="333"/>
+        <image name="dice1" width="170.5" height="170.5"/>
+        <image name="dice2" width="170.5" height="170.5"/>
+        <image name="dice3" width="170.5" height="170.5"/>
         <image name="logo" width="170.5" height="170.5"/>
         <image name="logo_dice" width="85" height="85"/>
     </resources>
