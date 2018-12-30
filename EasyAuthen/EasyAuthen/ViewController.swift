@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     //Explicit
     var user: String = ""
     var password: String = ""
-    let mySegue:String = "success_login"
+    let mySegue: String = "success_login"
+    let urlJson: String = "https://jsonplaceholder.typicode.com/users"
+    
+    var reciveJSON: String?
+    
+    
     
     
     
@@ -121,9 +126,66 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadJSON()
+        
+        
+        
     }//Main funtion
 
+    func loadJSON() -> Void {
+        
+        print("loadJSON Work")
+        
+        //ประกาสตัวแปรใช้เองครับ
+        let urlAPI = URL(string: urlJson)
+        let request = NSMutableURLRequest(url: urlAPI!)
+        
+                                                                            //ตัวแปรพิมพ์เอง
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+            
+            if (error != nil) {
+                
+                print("Have Error ")
+                
+            } else{
+                
+                if let testData = data {
+                    
+                    let canReadable = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
+//                    print("canReadable ==>\(String(describing: canReadable))")
+                    
+                    var jsonString: String = canReadable! as String //ตัวแปรนี้จะไม่มี optional ขึ้นมา
+                    
+                    //ฟังชั่นตัดคำ
+                    let squareBrackers1 = "["
+                    let squereBrackers2 = "]"
+                    
+                    //ตัดคำตำแหน่งที่1
+                    let noPrefixJSON = jsonString.components(separatedBy: squareBrackers1)
+                    //ตัดคำตำแหน่งที่2
+                    let noSubfixJSON = noPrefixJSON[1].components(separatedBy: squereBrackers2)
+                    
+                    jsonString = noSubfixJSON[0]
+                    
+                    //ปริ้นให้ดูข้อมูลว่าได้อะไรมาบ้างตัดแล้วเป็นยังไงครับ
+                    print("jsonString ==> \(jsonString)")
+                    
+                    
+                    
+                    
+                }//if
+                
+            }//if
+            
+        }//task
+        
+        task.resume()
+        
+        
+        
+        
+    }
+    
 
 }//Main Class
 
