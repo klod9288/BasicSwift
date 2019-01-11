@@ -17,12 +17,15 @@ class ViewController: UIViewController {
     let urlJson: String = "https://jsonplaceholder.typicode.com/users"
     
     var reciveJSON: String?
+    let urlPHP: String = "https://www.androidthai.in.th/bua/getAllData.php"
     
-    
-    
-    
-    
+    var myDictionry:NSDictionary?
     let demoData = ["user1":"1231","user2":"1232","user3":"1233","user4":"1234","user5":"1235",]
+    
+    
+    
+    
+    
     
     
     
@@ -131,13 +134,17 @@ class ViewController: UIViewController {
         
         
     }//Main funtion
-
+    
+    
+    
+    
+    //ฟังชั่นที่ใช้ JSON ดึงข้อมูลจาก Server ลงมาใช้
     func loadJSON() -> Void {
         
         print("loadJSON Work")
         
         //ประกาสตัวแปรใช้เองครับ
-        let urlAPI = URL(string: urlJson)
+        let urlAPI = URL(string: urlPHP)
         let request = NSMutableURLRequest(url: urlAPI!)
         
                                                                             //ตัวแปรพิมพ์เอง
@@ -152,7 +159,7 @@ class ViewController: UIViewController {
                 if let testData = data {
                     
                     let canReadable = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
-//                    print("canReadable ==>\(String(describing: canReadable))")
+                    print("canReadable ==>\(String(describing: canReadable))")
                     
                     var jsonString: String = canReadable! as String //ตัวแปรนี้จะไม่มี optional ขึ้นมา
                     
@@ -171,6 +178,8 @@ class ViewController: UIViewController {
                     print("jsonString ==> \(jsonString)")
                     
                     
+                    //เรียกใช้งาน//ฟังชั่นพ่นค่าออกมาโชร์ที่ UI = Call back
+//                    self.convertStringToDictionnary(jsonString: jsonString)
                     
                     
                 }//if
@@ -184,7 +193,38 @@ class ViewController: UIViewController {
         
         
         
-    }
+    }//loadJSON
+    
+    
+    func convertStringToDictionnary(jsonString: String) -> Void {
+        
+        //ดูค่าที่รับค่ามา
+        print("reciveJSON ==> \(jsonString)")
+        
+        
+        
+        
+        
+        
+        if let myJSON = jsonString.data(using: String.Encoding.utf8) {
+            
+            do {
+                
+                myDictionry = try JSONSerialization.jsonObject(with: myJSON, options: []) as? [String: AnyObject] as NSDictionary?
+                
+                print("myDictionnary ==>\(String(describing: myDictionry))")
+                
+            } catch let error as NSError {
+                
+                print("convert Error ==>\(error)")
+                
+            }//do
+            
+            
+        }//if
+        
+        
+    }//convertStringToDictionnary
     
 
 }//Main Class
