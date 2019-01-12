@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     var password: String = ""
     let mySegue: String = "GoToShowProduct"
     var reciveJSON: String?
-    let urlPHP: String = "https://www.androidthai.in.th/bua/getAllData.php"
-
-    let demoData = ["user1":"1231","user2":"1232","user3":"1233","user4":"1234","user5":"1235",]
+    
     
     
     @IBOutlet weak var userTextField: UITextField!
@@ -49,45 +47,12 @@ class ViewController: UIViewController {
 //            No Space
             
             print("No Space")
-            checkUserAnPassword(userString: user, passwordString: password)
+            loadJSON(userString: user, passwordString: password)
             
         }//if
         
     }//Login Button Funtion
     
-    func checkUserAnPassword(userString:String,passwordString:String) -> Void {
-        
-        //test variable Nil ?
-        if let testPassword = demoData[userString] {
-            
-            let truePassword = testPassword
-            print("truePassword ==> " + truePassword)
-            
-            if (passwordString == truePassword) {
-                
-                //Success Authen true
-                performSegue(withIdentifier: mySegue, sender: self)
-                
-                
-                
-            } else {
-                
-                //Authe False
-                myAlert(title: "Password False", massage: "Please Try Again Pasword False")
-                
-            }
-            
-        }else{
-            
-            myAlert(title: "User False", massage: "No \(userString) in my Database")
-            
-        }
-        
-        
-      //  let truePassword = demoData[userString]
-     //   print("truePassword ==> "+truePassword!)
-        
-    }
     
     func myAlert(title: String, massage: String) -> Void {
         
@@ -103,17 +68,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJSON()
-        
         
         
     }//Main funtion
     
     
     //ฟังชั่นที่ใช้ JSON ดึงข้อมูลจาก Server ลงมาใช้
-    func loadJSON() -> Void {
+    func loadJSON(userString: String, passwordString: String) -> Void {
         
-        print("loadJSON Work")
+        let urlPHP: String = "https://androidthai.in.th/bua/getUserWhereUserBua.php?isAdd=true&User=\(userString)"
+        print("urlPHP ==>\(urlPHP)")
         
         //ประกาสตัวแปรใช้เองครับ
         let urlAPI = URL(string: urlPHP)
@@ -131,8 +95,20 @@ class ViewController: UIViewController {
                 if let testData = data {
                     
                     let canReadable = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
-//                    print("canReadable ==>\(String(describing: canReadable))")
+                    print("canReadable ==>\(canReadable!)")
                     
+                    let resultJSON = canReadable!
+                    
+                    
+                    if resultJSON == "null" {
+                        //User False
+                        
+                        DispatchQueue.main.async {
+                            self.myAlert(title: "User False", massage: "NO This in my Datbase")
+                        }
+                        
+                    } else {
+                        
                     var jsonString: String = canReadable! as String //ตัวแปรนี้จะไม่มี optional ขึ้นมา
                     
                     //ฟังชั่นตัดคำ
@@ -147,11 +123,13 @@ class ViewController: UIViewController {
                     jsonString = noSubfixJSON[0]
                     
                     //ปริ้นให้ดูข้อมูลว่าได้อะไรมาบ้างตัดแล้วเป็นยังไงครับ
-//                    print("jsonString ==> \(jsonString)")
+                    print("jsonString ==> \(jsonString)")
                     
                     
                     //เรียกใช้งาน//ฟังชั่นพ่นค่าออกมาโชร์ที่ UI = Call back
-                    self.convertStringToDictionnary(jsonString: jsonString)
+                    //                    self.convertStringToDictionnary(jsonString: jsonString)
+                        
+                    }
                     
                     
                 }//if
