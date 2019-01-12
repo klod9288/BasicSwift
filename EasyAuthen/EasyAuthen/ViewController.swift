@@ -172,7 +172,9 @@ class ViewController: UIViewController {
                     
                     if password == truePassword {
                         
-                        
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "GoToShowProduct", sender: self)
+                        }
                         
                     } else {
                         
