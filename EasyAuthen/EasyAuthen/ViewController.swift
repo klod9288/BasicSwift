@@ -127,10 +127,9 @@ class ViewController: UIViewController {
                     
                     
                     //เรียกใช้งาน//ฟังชั่นพ่นค่าออกมาโชร์ที่ UI = Call back
-                    //                    self.convertStringToDictionnary(jsonString: jsonString)
+                                        self.convertStringToDictionnary(jsonString: jsonString, password: passwordString)
                         
                     }
-                    
                     
                 }//if
                 
@@ -146,12 +145,10 @@ class ViewController: UIViewController {
     }//loadJSON
     
     
-    func convertStringToDictionnary(jsonString: String) -> Void {
+    func convertStringToDictionnary(jsonString: String, password: String) -> Void {
         
         //ดูค่าที่รับค่ามา
         print("reciveJSON ==> \(jsonString)")
-        
-//        let testJSONung = "{\"user1":\"1231\"}"
         
         
         let testJSONung = jsonString
@@ -170,6 +167,20 @@ class ViewController: UIViewController {
                 if let testDict = myDictionry {
                     
                     print("testDictionry ==> \(testDict) ")
+                    let truePassword: String = testDict["Password"]! as! String
+                    
+                    
+                    if password == truePassword {
+                        
+                        
+                        
+                    } else {
+                        
+                        DispatchQueue.main.async {
+                            self.myAlert(title: "Password False", massage: "Please Try Again Password")
+                        }
+                        
+                    }
                     
                 }
                 
