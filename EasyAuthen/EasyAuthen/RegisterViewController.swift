@@ -32,10 +32,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-
-        
     }//Main Funtion
     
 
@@ -121,13 +117,6 @@ class RegisterViewController: UIViewController {
         }//task
         task.resume()
     }
-    
-    
-    
-    
-    
-    
-    
     
     func showAlert(title: String, message: String) -> Void {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)

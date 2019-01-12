@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B04250721E9A29D00999045 /* ShowProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04250621E9A29D00999045 /* ShowProductViewController.swift */; };
 		4B29FF9D21C8C75A00362907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B29FF9C21C8C75A00362907 /* RegisterViewController.swift */; };
 		4BD1ED4721C7873D001ED3B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD1ED4621C7873D001ED3B6 /* AppDelegate.swift */; };
 		4BD1ED4921C7873D001ED3B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD1ED4821C7873D001ED3B6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B04250621E9A29D00999045 /* ShowProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProductViewController.swift; sourceTree = "<group>"; };
 		4B29FF9C21C8C75A00362907 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4BD1ED4321C7873D001ED3B6 /* EasyAuthen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyAuthen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD1ED4621C7873D001ED3B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				4BD1ED4621C7873D001ED3B6 /* AppDelegate.swift */,
 				4BD1ED4821C7873D001ED3B6 /* ViewController.swift */,
 				4BD1ED4A21C7873D001ED3B6 /* Main.storyboard */,
+				4B04250621E9A29D00999045 /* ShowProductViewController.swift */,
 				4B29FF9C21C8C75A00362907 /* RegisterViewController.swift */,
 				4BFCF3DC21D715A300AF55AE /* ServiceViewController.swift */,
 				4BD1ED4D21C7873D001ED3B6 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				4BD1ED4921C7873D001ED3B6 /* ViewController.swift in Sources */,
 				4BFCF3DD21D715A300AF55AE /* ServiceViewController.swift in Sources */,
 				4BD1ED4721C7873D001ED3B6 /* AppDelegate.swift in Sources */,
+				4B04250721E9A29D00999045 /* ShowProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
