@@ -124,7 +124,7 @@
                                     <navigationItem title="Register" id="GFQ-sv-PAq">
                                         <barButtonItem key="leftBarButtonItem" title="Back" image="arrback" id="syF-K8-9fk">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="XVi-WA-wBu"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="back_home" id="XVi-WA-wBu"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="upload" id="UJ7-H7-rhu">
@@ -138,7 +138,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-x9-kVa">
                                 <rect key="frame" x="387" y="227" width="250" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="7Gf-Ob-81U"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="7Gf-Ob-81U"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,7 +147,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-mJ-PFp">
                                 <rect key="frame" x="387" y="265" width="250" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="pBg-lh-OVq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pBg-lh-OVq"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -156,7 +156,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-AE-9jg">
                                 <rect key="frame" x="387" y="303" width="250" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="zIR-iS-TE9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zIR-iS-TE9"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

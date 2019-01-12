@@ -65,19 +65,79 @@ class RegisterViewController: UIViewController {
         
         if (name!.count == 0)||(user!.count == 0) || (password!.count == 0) {
             print("Something Have Space")
+            showAlert(title: "Have Space", message: "Please Fill All Blank")
+            
         }else{
             
             
             print("No Have Space")
+            uploadNewUserToServer(strName: name!, strUser: user!, strPassword: password!)
             
             
         }
         
         
-        
-        
-        
     }// Upload
+    
+    func uploadNewUserToServer(strName: String,strUser: String,strPassword: String) -> Void {
+        print("Name ==> \(strName)")
+        print("User ==> \(strUser)")
+        print("Password ==> \(strPassword)")
+        
+        let urlAddUser = "http://androidthai.in.th/bua/addDataBua.php?isAdd=true&Name=\(strName)&User=\(strUser)&Password=\(strPassword)"
+        
+        print("urlAddUser ==> \(urlAddUser)")
+        
+        let url = URL(string: urlAddUser)
+        
+        let request = NSMutableURLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest){data, response, error in
+            
+            if error != nil {
+                
+                print("Have Error")
+                
+            } else {
+                
+                if let testReadable = data {
+                    
+                    let canReadData = NSString(data: testReadable, encoding: String.Encoding.utf8.rawValue)
+                    print("canReadData ==> \(canReadData!)")
+                    
+                    let myResult = canReadData!
+                    if myResult == "True" {
+                        
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "back_home", sender: self)
+                        }
+                        
+                    } else {
+                        
+                        print("Cannot Upload To Server")
+                        
+                    }
+                }
+            }
+        }//task
+        task.resume()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    func showAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
 
 }//Main Class
