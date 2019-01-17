@@ -35,12 +35,41 @@ class ServiceViewController: UIViewController, UITabBarDelegate,UITableViewDataS
 
         showData = myConstant.getTestData()
         
-        
-        
+        readJSON()
        
     }//Main funtion
     
-    
+    func readJSON() -> Void {
+        
+        let urlPHP = myConstant.getAllData()
+        guard let url = URL(string: urlPHP) else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            
+            guard let dataResponse = data, error == nil else {
+                
+                print("Error")
+                return
+                
+            }
+            
+            do {
+                
+                let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
+                print("jsonResponse ==> \(jsonResponse)")
+                
+            } catch let myError {
+                
+                print(myError)
+                
+            }
+            
+        }//end task
+        task.resume()
+        
+    }
     
 
 }//Main Class
