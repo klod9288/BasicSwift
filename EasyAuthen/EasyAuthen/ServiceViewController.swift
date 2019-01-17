@@ -8,23 +8,39 @@
 
 import UIKit
 
-class ServiceViewController: UIViewController {
+class ServiceViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
+    //Explicit
+    var myConstant = MyConstant()
+    var showData: Array<String>?
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (showData?.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        print("showData ==> \(String(describing: showData))")
+        
+        let objCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        objCell.textLabel?.text = showData![indexPath.row]
+        return objCell
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        showData = myConstant.getTestData()
+        
+        
+        
+       
+    }//Main funtion
+    
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+}//Main Class
